@@ -3,18 +3,14 @@
 
 class Point
 {
-protected:
-    float x;
-    float y;
-
 public:
     Point();
     Point(const float _x, const float _y);
     Point(const Point &other);
 
-    float X();
+    float x;
 
-    float Y();
+    float y;
 
     Point & operator=(const Point &other);
 

@@ -6,14 +6,6 @@ Point::Point(const float _x, const float _y) : x{_x}, y{_y} {}
 
 Point::Point(const Point &other) : x{other.x}, y{other.y} {}
 
-float Point::X() {
-    return x;
-}
-
-float Point::Y() {
-    return y;
-}
-
 Point & Point::operator=(const Point &other) {
     x = other.x;
     y = other.y;
