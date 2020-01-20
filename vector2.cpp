@@ -3,11 +3,11 @@
 
 Vector2::Vector2() = default;
 
-Vector2::Vector2(const float _x, const float _y) : Point(_x, _y) {}
+Vector2::Vector2(const float _x, const float _y) : x{_x}, y{_y} {}
 
-Vector2::Vector2(const Point &other) : Point(other) {}
+Vector2::Vector2(const Point &other)  : x{other.x}, y{other.y} {}
 
-Vector2::Vector2(const Vector2 &other) : Point(other.x, other.y) {}
+Vector2::Vector2(const Vector2 &other) : x{other.x}, y{other.y} {}
 
 Vector2 &Vector2::operator=(const Point &other) {
 	x = other.x;
@@ -185,15 +185,19 @@ Vector2 &Vector2::operator/=(const Vector2 &other) {
 }
 
 float Vector2::operator[](const int index) const {
-	return Point::operator[](index);
+	if (index == 0)
+		return x;
+	else if (index == 1)
+		return y;
+	throw "Vector2: specified index is not valid.";
 }
 
 bool Vector2::operator==(const Point &other) const {
-	return Point::operator==(other);
+	return x == other.x && y == other.y;
 }
 
 bool Vector2::operator==(const Vector2 &other) const {
-	return Point::operator==(other);
+	return x == other.x && y == other.y;
 }
 
 bool Vector2::operator!=(const Point &other) const {

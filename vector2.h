@@ -3,12 +3,16 @@
 #ifndef AIV_VECTOR2_H
 #define AIV_VECTOR2_H
 
-class Vector2 : public Point {
+class Vector2 {
 public:
 	Vector2();
 	Vector2(const float _x, const float _y);
 	Vector2(const Point &other);
 	Vector2(const Vector2 &other);
+
+	float x;
+
+	float y;
 
 	Vector2 &operator=(const Point &other);
 
