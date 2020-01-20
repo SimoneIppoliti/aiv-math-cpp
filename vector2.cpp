@@ -223,7 +223,7 @@ bool Vector2::IsZero() const {
 Vector2 &Vector2::Normalize() {
 	float mag = Magnitude();
 	if (mag > 0.0f) {
-		this /= mag;
+		*this /= mag;
 	}
 	
 	return *this;
