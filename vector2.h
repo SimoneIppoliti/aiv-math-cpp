@@ -11,7 +11,6 @@ public:
 	Vector2(const Vector2 &other);
 
 	float x;
-
 	float y;
 
 	Vector2 &operator=(const Point &other);

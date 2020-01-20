@@ -217,14 +217,13 @@ float Vector2::SquaredMagnitude() const {
 }
 
 bool Vector2::IsZero() const {
-	return x == 0 && y == 0;
+	return x == 0.0f && y == 0.0f;
 }
 
 Vector2 &Vector2::Normalize() {
 	float mag = Magnitude();
 	if (mag > 0.0f) {
-		x /= mag;
-		y /= mag;
+		this /= mag;
 	}
 	
 	return *this;
