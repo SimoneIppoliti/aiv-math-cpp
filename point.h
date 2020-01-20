@@ -8,7 +8,6 @@ public:
 	Point(const Point &other);
 
 	float x;
-
 	float y;
 
 	Point &operator=(const Point &other);

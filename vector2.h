@@ -1,7 +1,7 @@
-#include "point.h"
-
 #ifndef AIV_VECTOR2_H
 #define AIV_VECTOR2_H
+
+#include "point.h"
 
 class Vector2 {
 public:
